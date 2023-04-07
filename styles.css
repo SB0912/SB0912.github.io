@@ -1,0 +1,124 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-snap-type: y mandatory;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	padding: 10px;
+}
+
+nav a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+}
+
+nav a:hover:before {
+	transform: scaleX(1);
+}
+
+main {
+	scroll-snap-type: y mandatory;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+}
+
+section h2 {
+	margin-top: 0;
+}
+
+section p {
+	line-height: 1.5;
+}
+
+.bg-blue {
+	background-color: #0074D9;
+}
+
+.bg-green {
+	background-color: #2ECC40;
+}
+
+.bg-purple {
+	background-color: #B10DC9;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+button {
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.button-0 {
+    border-radius: 5px;
+    
+}
+
+.button-1 {
+	background-color: #0074D9;
+}
+
+.button-2 {
+	background-color: #2ECC40;
+}
+
+.button-3 {
+	background-color: #2ECC40
+}
