@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Personal Webpage</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>My Personal Webpage</title>
 </head>
 <body>
 	<header>
@@ -17,12 +20,18 @@
 	</header>
 
 	<main>
-		<section id="biography" class="bg-blue">
+
+		<section id="title" class="bg-title">
+			<h2>Slater Bernstein</h2>
+			<p>Insert your biography information here.</p>
+		</section>
+
+		<section id="biography" class="bg-bio">
 			<h2>Biography</h2>
 			<p>Insert your biography information here.</p>
 		</section>
 
-		<section id="portfolio" class="bg-green">
+		<section id="portfolio" class="bg-portfolio">
 			<h2>Portfolio</h2>
 			<div class="button-container">
 				<button class="button-1">
@@ -33,12 +42,20 @@
 			</div>
 		</section>
 
-		<section id="contact" class="bg-purple">
+		<section id="contact" class="bg-contact">
 			<h2>Contact</h2>
 			<p>Insert your contact information here.</p>
-		</section>
+            <div class="contact box">
+
+                <button class="fa-brands fa-linkedin fa-2xl"></button>
+                <button class="fa-brands fa-github fa-2xl"></button>
+                <button class="fa-solid fa-envelope fa-2xl"></button>
+                <button class="fa-solid fa-phone fa-2xl"></button>
+            </div>
+        </section>
 	</main>
 
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
 	<script src="app.js"></script>
 </body>
 </html>
