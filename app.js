@@ -33,3 +33,15 @@ function smoothScroll(targetSection) {
 
 	requestAnimationFrame(animation);
 }
+
+const buttons = document.querySelectorAll('.social-button');
+
+buttons.forEach(button => {
+  button.addEventListener('mouseover', () => {
+    button.classList.add('fa-shake');
+  });
+  
+  button.addEventListener('mouseout', () => {
+    button.classList.remove('fa-shake');
+  });
+});

@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon">
 	<title>My Personal Webpage</title>
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-                <li><a href="#title">Home</a></li>
-				<li><a href="#biography">Biography</a></li>
-				<li><a href="#portfolio">Portfolio</a></li>
-				<li><a href="#contact">Contact</a></li>
+                <li class="nav-icons"><a href="#title">Home</a></li>
+				<li class="nav-icons"><a href="#biography">Biography</a></li>
+				<li class="nav-icons"><a href="#portfolio">Portfolio</a></li>
+				<li class="nav-icons"><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -23,6 +24,9 @@
 
 		<section id="title" class="bg-title">
 			<h2>Slater Bernstein</h2>
+                <video id="background-video" autoplay loop muted>
+                    <source src="/media/lux-dust.mp4" type="video/mp4">
+                </video>
 			<p>Insert your biography information here.</p>
 		</section>
 
@@ -34,9 +38,7 @@
 		<section id="portfolio" class="bg-portfolio">
 			<h2>Portfolio</h2>
 			<div class="button-container">
-				<button class="button-1">
-                    <img src="https://logodix.com/logo/1335565.jpg">
-                </button>
+				<button class="button-1">Button 1</button>
 				<button class="button-2">Button 2</button>
 				<button class="button-3">Button 3</button>
 			</div>
@@ -46,11 +48,11 @@
 			<h2>Contact</h2>
 			<p>Insert your contact information here.</p>
             <div class="contact box">
-
-                <button class="fa-brands fa-linkedin fa-2xl"></button>
-                <button class="fa-brands fa-github fa-2xl"></button>
-                <button class="fa-solid fa-envelope fa-2xl"></button>
-                <button class="fa-solid fa-phone fa-2xl"></button>
+                <button class="social-button fa-brands fa-linkedin fa-2xl"></button>
+                <button class="social-button fa-brands fa-github fa-2xl"></button>
+                <button class="social-button fa-solid fa-envelope fa-2xl"></button>
+                <button class="social-button fa-solid fa-phone fa-2xl"></button>
+                
             </div>
         </section>
 	</main>
