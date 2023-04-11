@@ -56,3 +56,23 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+const video = document.getElementById('background-video');
+
+const sources = [
+  '/media/lux-dust.mp4',
+  '/media/lux-embers-2.mp4',
+  '/media/lux-thunder.mp4'
+];
+
+let sourceIndex = 0;
+
+function changeVideoSource() {
+  video.src = sources[sourceIndex];
+  sourceIndex++;
+  if (sourceIndex >= sources.length) {
+    sourceIndex = 0;
+  }
+}
+
+setInterval(changeVideoSource, 10 * 1000); // 30 minutes in milliseconds

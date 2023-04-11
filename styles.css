@@ -92,20 +92,19 @@ section {
 
 section h2 {
   margin-top: 0;
-  font-size: 500%;
+  font-size: 8vw;
   color: #fff;
 }
 
 #title h2 {
   margin-top: 0;
-  font-size: 500%;
   color: #fff;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap;
   margin: 10 auto;
   letter-spacing: 0.1em;
-  animation: typing 1.5s steps(20, end), blink-caret 0.75s step-end infinite;
+  animation: typing 1.5s steps(20, end), blink-caret 0.70s step-end infinite;
 }
 
 @keyframes typing {
@@ -113,7 +112,7 @@ section h2 {
     width: 0;
   }
   to {
-    width: 40%;
+    width: 75%;
   }
 }
 
