@@ -1,63 +1,67 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon">
-	<title>My Personal Webpage</title>
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-                <li class="nav-icons"><a href="#title">Home</a></li>
-				<li class="nav-icons"><a href="#biography">Biography</a></li>
-				<li class="nav-icons"><a href="#portfolio">Portfolio</a></li>
-				<li class="nav-icons"><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon"
+    />
+    <title>My Personal Webpage</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <ul>
+          <li class="nav-icons"><a href="#title">Home</a></li>
+          <li class="nav-icons"><a href="#biography">Biography</a></li>
+          <li class="nav-icons"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-icons"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-	<main>
+    <main>
+      <section id="title" class="bg-title">
+        <h2>Slater Bernstein</h2>
+        <video id="background-video" autoplay loop muted>
+          <source src="/media/lux-dust.mp4" type="video/mp4" />
+        </video>
+        <p>Insert your biography information here.</p>
+      </section>
 
-		<section id="title" class="bg-title">
-			<h2>Slater Bernstein</h2>
-                <video id="background-video" autoplay loop muted>
-                    <source src="/media/lux-dust.mp4" type="video/mp4">
-                </video>
-			<p>Insert your biography information here.</p>
-		</section>
+      <section id="biography" class="bg-bio">
+        <h2>Biography</h2>
+        <p>Insert your biography information here.</p>
+      </section>
 
-		<section id="biography" class="bg-bio">
-			<h2>Biography</h2>
-			<p>Insert your biography information here.</p>
-		</section>
+      <section id="portfolio" class="bg-portfolio">
+        <h2>Portfolio</h2>
+        <div class="button-container">
+          <button class="button-1">Button 1</button>
+          <button class="button-2">Button 2</button>
+          <button class="button-3">Button 3</button>
+        </div>
+      </section>
 
-		<section id="portfolio" class="bg-portfolio">
-			<h2>Portfolio</h2>
-			<div class="button-container">
-				<button class="button-1">Button 1</button>
-				<button class="button-2">Button 2</button>
-				<button class="button-3">Button 3</button>
-			</div>
-		</section>
+      <section id="contact" class="bg-contact">
+        <h2>Contact</h2>
+        <p>Insert your contact information here.</p>
+        <div class="contact box">
+          <button class="social-button fa-brands fa-linkedin fa-2xl"></button>
+          <button class="social-button fa-brands fa-github fa-2xl"></button>
+          <button class="social-button fa-solid fa-envelope fa-2xl"></button>
+          <button class="social-button fa-solid fa-phone fa-2xl"></button>
+        </div>
+      </section>
+    </main>
 
-		<section id="contact" class="bg-contact">
-			<h2>Contact</h2>
-			<p>Insert your contact information here.</p>
-            <div class="contact box">
-                <button class="social-button fa-brands fa-linkedin fa-2xl"></button>
-                <button class="social-button fa-brands fa-github fa-2xl"></button>
-                <button class="social-button fa-solid fa-envelope fa-2xl"></button>
-                <button class="social-button fa-solid fa-phone fa-2xl"></button>
-                
-            </div>
-        </section>
-	</main>
-
-    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
-	<script src="app.js"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
 </html>
