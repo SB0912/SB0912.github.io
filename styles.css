@@ -13,8 +13,11 @@ header {
   left: 0;
   width: 100%;
   z-index: 1;
-  position: relative;
   transition: top 0.3s;
+}
+
+.hidden-navbar {
+  top: -60px; /* Adjust based on navbar height */
 }
 
 .nav-icons {
@@ -199,7 +202,7 @@ section p {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 10;
+  padding: 10px;
   margin-left: 30px;
 }
 

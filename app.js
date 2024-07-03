@@ -76,3 +76,19 @@ function changeVideoSource() {
 }
 
 setInterval(changeVideoSource, 10 * 1000); // 30 minutes in milliseconds
+
+
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    navbar.classList.add('hidden-navbar');
+  } else {
+    // Scrolling up
+    navbar.classList.remove('hidden-navbar');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});
