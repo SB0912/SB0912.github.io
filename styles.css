@@ -13,11 +13,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 1;
+  position: relative;
   transition: top 0.3s;
-}
-
-.hidden-navbar {
-  top: -60px; /* Adjust based on navbar height */
 }
 
 .nav-icons {
@@ -27,6 +24,12 @@ header {
 nav {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(rgb(53, 53, 53), rgba(0, 0, 0, 0));
+  left: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top .8s;
 }
 
 nav ul {
@@ -45,7 +48,7 @@ nav a {
   text-decoration: none;
   position: relative;
   display: inline-block;
-  padding: 10px;
+  padding: 25px;
 }
 
 nav a:before {
@@ -78,6 +81,10 @@ section {
   scroll-snap-align: start;
   background-size: cover;
   background-position: center;
+}
+
+#title {
+  background-image: url("portfolio-background.jpg");
 }
 
 #biography {
@@ -202,7 +209,7 @@ section p {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 10;
   margin-left: 30px;
 }
 
