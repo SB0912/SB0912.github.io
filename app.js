@@ -38,11 +38,11 @@ const buttons = document.querySelectorAll(".social-button");
 
 buttons.forEach((button) => {
   button.addEventListener("mouseover", () => {
-    button.classList.add("fa-shake");
+    button.classList.add("fa-beat");
   });
 
   button.addEventListener("mouseout", () => {
-    button.classList.remove("fa-shake");
+    button.classList.remove("fa-beat");
   });
 });
 
