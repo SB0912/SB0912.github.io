@@ -1,0 +1,92 @@
+/* Tailwind included via CDN in HTML for utilities */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #1a202c; /* gray-900 */
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Simple fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar styles */
+.navbar {
+  background: #1e40af; /* blue-900 */
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #bfdbfe; /* blue-300 */
+}
+
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e40af;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 0.5rem;
+  }
+  .navbar .nav-links.active {
+    display: flex;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+}
+
+@keyframes zoomInSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.bg-zoom {
+  animation: zoomInSlow 5s ease-in-out forwards;
+}

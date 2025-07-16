@@ -1,68 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Audiowide"
-    />
-    <title>My Personal Webpage</title>
-  </head>
-  <body>
-    <header>
-      <nav id="navbar">
-        <ul>
-          <li class="nav-icons"><a href="#title">Home</a></li>
-          <li class="nav-icons"><a href="#biography">Biography</a></li>
-          <li class="nav-icons"><a href="#portfolio">Portfolio</a></li>
-          <li class="nav-icons"><a href="#contact">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slater Bernstein Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="text-xl font-bold">Slater Bernstein Consulting</div>
+    <button class="mobile-menu-button" aria-label="Toggle Menu">
+      &#9776;
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+<header class="relative min-h-[600px] flex items-center overflow-hidden">
+  <!-- Background image anchored to right side -->
+  <div class="absolute inset-0 bg-no-repeat bg-cover bg-right bg-zoom" style="background-image: url('assets/image copy.png'); z-index: -2;"></div>
+
+  <!-- Gradient overlay from left to transparent right -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900 to-transparent z-0"></div>
+
+  <!-- Content container -->
+  <div class="relative z-10 px-6 md:px-12 lg:px-24 py-20 max-w-4xl text-white">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 drop-shadow-lg">
+      Expert Witness Analysis That Makes an Impact
+    </h1>
+    <p class="text-lg md:text-xl text-gray-100 mb-8 drop-shadow-sm max-w-2xl">
+      We turn raw data into compelling legal insights that help you win. Trusted analytics for attorneys, law firms, and expert witnesses.
+    </p>
+    <div class="space-x-4">
+      <a href="services.html" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition inline-block">
+        Learn More
+      </a>
+      <a href="contact.html" class="bg-transparent border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-blue-900 transition inline-block">
+        Book a Consultation
+      </a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- About Section -->
+<section class="py-16 px-6 max-w-6xl mx-auto fade-in">
+  <div class="md:flex md:items-center md:gap-12">
+    <!-- Left column: text -->
+    <div class="md:w-1/2 mb-10 md:mb-0">
+      <h2 class="text-3xl font-semibold mb-6">About Slater Bernstein Consulting</h2>
+      <p class="text-gray-700 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p class="text-gray-700">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <!-- Right column: image placeholder -->
+    <div class="md:w-1/2 flex justify-center">
+      <div class="w-full max-w-md h-64 rounded shadow-md bg-cover" style="background-image: url('assets/image.png');"></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto fade-in">
+    <h2 class="text-3xl font-semibold text-center mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="border p-8 rounded shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-4">Labor & Employment Consulting</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</li>
+          <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
         </ul>
-      </nav>
-    </header>
+      </div>
+      <div class="border p-8 rounded shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-4">Business Data Analytics</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</li>
+          <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <main>
-      <section id="title" class="bg-title">
-        <h2>Slater Bernstein</h2>
-        <video id="background-video" autoplay loop muted>
-          <source src="/media/lux-dust.mp4" type="video/mp4" />
-        </video>
-        <p>Insert your biography information here.</p>
-      </section>
+  <!-- Testimonials Section -->
+<section class="py-16 px-6 max-w-4xl mx-auto fade-in">
+  <h2 class="text-3xl font-semibold text-center mb-12">What Our Clients Say</h2>
+  <div id="testimonial-container" class="relative bg-white border rounded shadow p-10 text-center max-w-3xl mx-auto">
+    <p id="testimonial-text" class="text-lg italic text-gray-700 mb-6 transition-opacity duration-700 opacity-100">
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    </p>
+    <p id="testimonial-client" class="font-semibold text-blue-700">- John Doe, CEO</p>
 
-      <section id="biography" class="bg-bio">
-        <h2>Biography</h2>
-        <p>Insert your biography information here.</p>
-      </section>
+    <!-- Navigation Arrows -->
+    <button id="prev-testimonial" aria-label="Previous testimonial"
+      class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white rounded-full w-10 h-10 hover:bg-blue-800 transition">
+      &#10094;
+    </button>
+    <button id="next-testimonial" aria-label="Next testimonial"
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white rounded-full w-10 h-10 hover:bg-blue-800 transition">
+      &#10095;
+    </button>
+  </div>
+</section>
 
-      <section id="portfolio" class="bg-portfolio">
-        <h2>Portfolio</h2>
-        <div class="button-container">
-          <button class="button-1">Button 1</button>
-          <button class="button-2">Button 2</button>
-          <button class="button-3">Button 3</button>
-        </div>
-      </section>
 
-      <section id="contact" class="bg-contact">
-        <h2>Contact</h2>
-        <!-- <p>Insert your contact information here.</p> -->
-        <div class="contact box">
-          <button class="social-button fa-brands fa-linkedin fa-2xl" onclick="window.open('https://www.linkedin.com/in/slaterbernstein', '_blank')"></button>
-          <button class="social-button fa-brands fa-github fa-2xl" onclick="window.open('https://github.com/SB0912', '_blank')"></button>
-          <button class="social-button fa-solid fa-envelope fa-2xl" onclick="window.location.href='mailto:slater.bernstein@gmail.com'"></button>
-          <button class="social-button fa-solid fa-phone fa-2xl"  style="--fa-animation-duration: 1s;" onclick="window.location.href='tel:+16125978989'"></button>
-        </div>
-      </section>
-    </main>
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
+    &copy; 2025 Slater Bernstein Consulting. All rights reserved.
+  </footer>
 
-    <script
-      src="https://kit.fontawesome.com/7c8801c017.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="app.js"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-  </body>
+  <script src="js/script.js"></script>
+</body>
 </html>
