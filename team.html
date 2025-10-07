@@ -7,44 +7,48 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="text-xl font-bold">Slater Bernstein Consulting</div>
+    <a href="index.html" class="text-xl font-bold">Slater Bernstein Consulting</a>
     <button class="mobile-menu-button" aria-label="Toggle Menu">&#9776;</button>
     <div class="nav-links">
-      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="team.html" class="underline">Team</a>
+      <a href="readMore.html">Read More</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
 
   <!-- Team Page Content -->
-  <main class="py-16 px-6 max-w-6xl mx-auto fade-in">
+  <main class="flex-grow py-16 px-6 max-w-6xl mx-auto fade-in">
     <h1 class="text-4xl font-semibold text-center mb-12">Our Team</h1>
 
     <div class="grid md:grid-cols-4 gap-8 justify-items-center">
+      <button target="_blank" onclick="window.open('https://www.linkedin.com/in/slaterbernstein/', '_blank')">
+        <div class="text-center max-w-xs">
+          <img src="assets\1719422518267.jpg" alt="Slater Bernstein" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"/>
+          <h3 class="text-xl font-semibold">Slater Bernstein</h3>
+          <p class="text-gray-600">Principal</p>
+        </div>
+      </button>
+      <button target="_blank" onclick="window.open('https://www.linkedin.com/in/greg-bernstein-85bb035/', '_blank')">
+        <div class="text-center max-w-xs">
+          <img src="assets\1646934928953.jpg" alt="Greg Bernstein" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"/>
+          <h3 class="text-xl font-semibold">Greg Bernstein</h3>
+          <p class="text-gray-600">Partner</p>
+        </div>
+      </button>
       <div class="text-center max-w-xs">
         <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-        <h3 class="text-xl font-semibold">Slater bernstein</h3>
-        <p class="text-gray-600">Principal</p>
-      </div>
-      <div class="text-center max-w-xs">
-        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-        <h3 class="text-xl font-semibold">Greg Bernstein</h3>
-        <p class="text-gray-600">Partner</p>
-      </div>
-      <div class="text-center max-w-xs">
-        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-        <h3 class="text-xl font-semibold">Consectetur Adipiscing</h3>
-        <p class="text-gray-600">Data Scientist</p>
+        <h3 class="text-xl font-semibold">Eric Sand</h3>
+        <p class="text-gray-600">Outside Consultant</p>
       </div>
       <div class="text-center max-w-xs">
         <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
         <h3 class="text-xl font-semibold">Elit Sed Do</h3>
-        <p class="text-gray-600">Consultant</p>
+        <p class="text-gray-600">Janitor</p>
       </div>
     </div>
   </main>

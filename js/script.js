@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Testimonials data
 const testimonials = [
   {
-    text: "Slater Bernstein Consulting transformed our litigation strategy with expert data analysis.",
-    client: "Jane Smith, General Counsel"
+    text: "...SBC's technical acumen, responsiveness, and strategic insight made them an invaluable extension of our litigation team. We would not hesitate to engage them again...",
+    client: "Greg Simpson, Meagher + Geer, P.L.L.P."
   },
   {
-    text: "Their insights were invaluable during our labor dispute case. Highly recommended!",
-    client: "Mark Johnson, HR Director"
+    text: "...Thanks to their expert analysis and collaboration with our legal team, we achieved a settlement that protected our interests and minimized disruption to our operations...",
+    client: "Lead counsel, Midwest Healthcare Provider."
   },
   {
     text: "Professional, reliable, and deeply knowledgeable in forensic data validation.",

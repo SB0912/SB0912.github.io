@@ -20,9 +20,15 @@ body {
   transform: translateY(0);
 }
 
+.caseButtons:hover{
+  background-color: rgb(241, 241, 241);
+  box-shadow: 1px 1px 3px rgba(114, 114, 114, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
 /* Navbar styles */
 .navbar {
-  background: #1e40af; /* blue-900 */
+  background: #0e1a46;
   color: white;
   padding: 1rem 2rem;
   position: sticky;

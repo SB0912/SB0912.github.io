@@ -7,22 +7,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="text-xl font-bold">Slater Bernstein Consulting</div>
+    <a href="index.html" class="text-xl font-bold">Slater Bernstein Consulting</a>
     <button class="mobile-menu-button" aria-label="Toggle Menu">&#9776;</button>
     <div class="nav-links">
-      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="team.html">Team</a>
+      <a href="readMore.html">Read More</a>
       <a href="contact.html" class="underline">Contact</a>
     </div>
   </nav>
 
   <!-- Contact Page Content -->
-  <main class="py-16 px-6 max-w-3xl mx-auto fade-in">
+  <main class="flex-grow py-16 px-6 max-w-3xl mx-auto fade-in">
     <h1 class="text-4xl font-semibold text-center mb-8">Get in Touch</h1>
 
     <form class="space-y-6" onsubmit="event.preventDefault(); alert('Form submitted (not really)');">
@@ -55,7 +55,7 @@
     <div class="mt-12 text-center text-gray-700 space-y-1">
       <p>Email: slater.bernstein@gmail.com</p>
       <p>Phone: (612) 597-8989</p>
-      <p>Address: 400 Marquette Avenue, Minneapolis, MN, 55401</p>
+      <p>Address: </p>
     </div>
   </main>
 
