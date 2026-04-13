@@ -96,65 +96,78 @@ body {
 .bg-zoom {
   animation: zoomInSlow 5s ease-in-out forwards;
 }
-/* Section with gradient */
+/* Base (mobile-first) */
 .trusted-partners {
-    display: inline-flex;
-    padding: 20px 20px;
+    padding: 30px 15px;
     background: linear-gradient(to right, #1a202c, #ffffff);
 }
 
-/* Grid layout */
 .trusted-grid {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: auto;
+    text-align: center;
 }
 
-/* Left label */
+/* Label */
 .trusted-label h2 {
     font-size: 1.7rem;
+    color: #d0e3ff;
+    font-weight: bold;
     font-style: italic;
-    color: #dadada;
-    line-height: 1.3;
+    margin: 0;
 }
 
-/* Logos container */
+/* Logos grid (THIS is the key fix) */
 .partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
     align-items: center;
+    justify-items: center;
 }
 
 /* Logos */
 .partners-container img {
-    max-width: 120px;
-    height: auto;
-    filter: grayscale(40%);
-    opacity: 0.8;
+    height: 40px; /* uniform height */
+    width: auto;
+    max-width: 100%;
+    filter: grayscale(50%);
+    opacity: 0.7;
     transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .partners-container img:hover {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 700px) {
+/* Tablet */
+@media (min-width: 600px) {
+    .partners-container img {
+        height: 45px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
     .trusted-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 20rem 1fr;
+        text-align: left;
+        align-items: center;
     }
 
-    .trusted-label {
-        margin-bottom: 10px;
+    .trusted-label h2 {
+        font-size: 1.5rem;
     }
 
     .partners-container {
-        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        justify-items: center;
+    }
+
+    .partners-container img {
+        height: 50px;
     }
 }
