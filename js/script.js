@@ -85,10 +85,10 @@ nextBtn.addEventListener('click', () => {
   resetInterval();
 });
 
-// Auto cycle every 15 seconds
+// Auto cycle every 30 seconds
 let testimonialInterval = setInterval(() => {
   showTestimonial(currentTestimonial + 1);
-}, 15000);
+}, 30000);
 
 function resetInterval() {
   clearInterval(testimonialInterval);
