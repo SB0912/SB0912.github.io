@@ -4,140 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Slater Bernstein Consulting</title>
+  <meta name="description" content="Expert witness data analysis for attorneys and law firms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html" class="text-xl font-bold">Slater Bernstein Consulting Agency</a>
-    <button class="mobile-menu-button" aria-label="Toggle Menu">
-      &#9776;
-    </button>
+    <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
+    <button class="mobile-menu-button" aria-label="Toggle Menu">&#9776;</button>
     <div class="nav-links">
       <a href="services.html">Mission</a>
       <a href="team.html">Team</a>
       <a href="readMore.html">Read More</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </div>
   </nav>
 
-<header class="relative min-h-[600px] flex items-center overflow-hidden">
-  <!-- Background image anchored to right side -->
-  <div class="absolute inset-0 bg-no-repeat bg-cover bg-right bg-zoom" style="background-image: url('assets/image copy.png'); z-index: -2;"></div>
-
-  <!-- Gradient overlay from left to transparent right -->
-  <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900 to-transparent z-0"></div>
-
-  <!-- Content container -->
-  <div class="relative z-10 px-6 md:px-12 lg:px-24 py-20 max-w-4xl text-white">
-    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 drop-shadow-lg">
-      Expert Witness Analysis That Makes an Impact
-    </h1>
-    <p class="text-lg md:text-xl text-gray-100 mb-8 drop-shadow-sm max-w-2xl">
-      We turn raw data into compelling legal insights that help you win. Trusted analytics for attorneys, law firms, and expert witnesses.
-    </p>
-    <div class="space-x-2">
-      <a href="services.html" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition inline-block">
-        Learn More
-      </a>
-      <a href="contact.html" class="bg-transparent border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-blue-900 transition inline-block">
-        Book a Consultation
-      </a>
-    </div>
-  </div>
-</header>
-
-
-  <!-- About Section -->
-<section class="py-16 px-6 max-w-6xl mx-auto fade-in">
-  <div class="md:flex md:items-center md:gap-12">
-    <!-- Left column: text -->
-    <div class="md:w-1/2 mb-10 md:mb-0">
-      <h2 class="text-3xl font-semibold mb-6">About SBC Agency</h2>
-      <p class="text-gray-700 mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <p class="text-gray-700">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
-
-    <!-- Right column: image placeholder -->
-    <div class="md:w-1/2 flex justify-center">
-      <div class="w-full max-w-md h-64 rounded shadow-md bg-cover" style="background-image: url('assets/image.png');"></div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Services Section -->
-  <section class="py-16 px-6 max-w-6xl mx-auto fade-in">
-    <h2 class="text-3xl font-semibold text-center mb-12">Our Services</h2>
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="border p-8 rounded shadow hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold mb-4">Labor & Employment Consulting</h3>
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</li>
-          <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-        </ul>
-      </div>
-      <div class="border p-8 rounded shadow hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold mb-4">Business Data Analytics</h3>
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</li>
-          <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-        </ul>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg bg-zoom" style="background-image: url('assets/image copy.png');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <span class="hero-badge">Expert witness &amp; litigation analytics</span>
+      <h1>Expert witness analysis that <span>makes an impact</span></h1>
+      <p>We turn raw data into compelling legal insights that help you win. Trusted analytics for attorneys, law firms, and expert witnesses.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="services.html" class="btn btn-light">Learn More</a>
+        <a href="contact.html" class="btn btn-ghost">Book a Consultation</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Testimonials Section -->
-<section class="py-16 px-6 max-w-4xl mx-auto fade-in">
-  <h2 class="text-3xl font-semibold text-center mb-12">What Our Clients Say</h2>
-  <div id="testimonial-container" class="relative bg-white border rounded shadow p-10 text-center max-w-3xl mx-auto">
-    <p id="testimonial-text" class="text-lg italic text-gray-700 mb-6 transition-opacity duration-700 opacity-100">
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    </p>
-    <p id="testimonial-client" class="font-semibold text-blue-700">- John Doe, CEO</p>
+  <main>
+    <!-- Stats -->
+    <section class="container fade-in" style="margin-top: -3rem; position: relative; z-index: 2;">
+      <div class="stats">
+        <div class="stat"><strong>$1.75M+</strong><span>Value Added for clients</span></div>
+        <div class="stat"><strong>75%</strong><span>Reduction in claimed damages</span></div>
+        <div class="stat"><strong>$750K</strong><span>Settlement supported</span></div>
+        <div class="stat"><strong>100%</strong><span>Unbiased analysis</span></div>
+      </div>
+    </section>
 
-    <!-- Navigation Arrows -->
-    <button id="prev-testimonial" aria-label="Previous testimonial"
-      class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white rounded-full w-10 h-10 hover:bg-blue-800 transition">
-      &#10094;
-    </button>
-    <button id="next-testimonial" aria-label="Next testimonial"
-      class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white rounded-full w-10 h-10 hover:bg-blue-800 transition">
-      &#10095;
-    </button>
-  </div>
-</section>
-<section class="trusted-partners">
-    <div class="trusted-grid">
-
-        <div class="trusted-label">
-            <h2>Trusted Partners:</h2>
+    <!-- About -->
+    <section class="section fade-in">
+      <div class="container md:flex md:items-center md:gap-16">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <span class="eyebrow">About</span>
+          <h2 class="section-title">About SBC Agency</h2>
+          <p class="mb-4">
+            At SBC agency, trusted legal expertise meets data-driven insights to support attorneys, and law firms in achieving successful outcomes. Founded and led by Slater Bernstein, a data analytics expert with extensive experience in legal consulting, our agency is dedicated to delivering precise and actionable insights for complex legal matters.
+          </p>
+          <p>
+            Our commitment to unequivocal and unbiased analysis ensures that whether you are defending, or pursuing legal action against another party, you receive accurate, reliable, and actionable insights to support your case.
+          </p>
         </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="w-full max-w-md h-72 rounded-2xl bg-cover bg-center" style="background-image: url('assets/image.png'); box-shadow: var(--shadow-lg);"></div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Services -->
+    <section class="section fade-in" style="background: #fff; border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="text-center mb-12">
+          <span class="eyebrow">What we do</span>
+          <h2 class="section-title">Our Services</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card card-hover">
+            <div class="card-icon">⚖</div>
+            <h3 class="text-2xl font-bold mb-4">Labor &amp; Employment Consulting</h3>
+            <ul class="check-list">
+              <li>over $1.75 million in value recovered for clients in labor and employment cases.</li>
+              <li>Top-rated communication, collaboration, and iteration with our clients until the Job is finished.</li>
+              <li>Data Security and Governance is our top priority, ensuring that all client information is handled with the utmost care and compliance.</li>
+            </ul>
+          </div>
+          <div class="card card-hover">
+            <div class="card-icon">⚙</div>
+            <h3 class="text-2xl font-bold mb-4">Business Workflow Optimization</h3>
+            <ul class="check-list">
+              <li>Streamlining business processes to enhance efficiency and productivity.</li>
+              <li>Implementing data-driven strategies for optimized workflow management.</li>
+              <li>Ensuring seamless integration of technology solutions to support business operations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section fade-in">
+      <div class="container" style="max-width: 52rem;">
+        <div class="text-center mb-10">
+          <span class="eyebrow">Testimonials</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+        <div id="testimonial-container" class="card relative text-center" style="padding: 3rem 4.5rem;">
+          <div aria-hidden="true" style="font-size: 4rem; line-height: 1; color: var(--blue-100); font-weight: 800;">&ldquo;</div>
+          <p id="testimonial-text" class="text-lg text-gray-700 mb-6 transition-opacity duration-700 opacity-100" style="color: var(--ink);">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          </p>
+          <p id="testimonial-client" class="font-semibold" style="color: var(--blue-600);">- John Doe, CEO</p>
+
+          <button id="prev-testimonial" aria-label="Previous testimonial"
+            class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full w-10 h-10 border border-gray-200 bg-white shadow-sm hover:bg-blue-600 hover:text-white transition">
+            &#10094;
+          </button>
+          <button id="next-testimonial" aria-label="Next testimonial"
+            class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full w-10 h-10 border border-gray-200 bg-white shadow-sm hover:bg-blue-600 hover:text-white transition">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container pb-16 fade-in">
+      <div class="rounded-3xl text-center text-white" style="padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem; background: radial-gradient(60% 120% at 50% 0%, rgba(59,130,246,.4), transparent 70%), var(--navy-900);">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color:#fff;">Ready to strengthen your case?</h2>
+        <p class="mb-8 mx-auto" style="color:#cbd5e1; max-width: 34rem;">Tell us about your matter and we'll show you what your data can prove.</p>
+        <a href="contact.html" class="btn btn-light">Book a Consultation</a>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="trusted-partners">
+      <div class="trusted-grid">
+        <div class="trusted-label"><h2>Trusted Partners</h2></div>
         <div class="partners-container">
-            <a href="#"><img src="assets\MGLogo-MINI-v2.svg" alt=""></a>
-            <a href="#"><img src="assets\logo.png" alt=""></a>
-            <a href="#"><img src="https://via.placeholder.com/150x80?text=4" alt=""></a>
-            <a href="#"><img src="https://via.placeholder.com/150x80?text=5" alt=""></a>
+          <a href="#"><img src="assets\MGLogo-MINI-v2.svg" alt="Partner logo"></a>
+          <a href="#"><img src="assets\logo.png" alt="Partner logo"></a>
+          <a href="#"><img src="https://via.placeholder.com/150x80?text=4" alt="Partner logo"></a>
+          <a href="#"><img src="https://via.placeholder.com/150x80?text=5" alt="Partner logo"></a>
         </div>
-
-    </div>
-</section>
-
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <!-- <footer class="bg-blue-900 text-white text-center py-6 mt-12">
-    &copy; 2025 Slater Bernstein Consulting. All rights reserved.
-  </footer> -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
+        <div class="footer-links">
+          <a href="services.html">Mission</a>
+          <a href="team.html">Team</a>
+          <a href="readMore.html">Read More</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Slater Bernstein Consulting. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

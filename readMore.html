@@ -4,36 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Read More - Slater Bernstein Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html" class="text-xl font-bold">Slater Bernstein Consulting Agency</a>
+    <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
     <button class="mobile-menu-button" aria-label="Toggle Menu">&#9776;</button>
     <div class="nav-links">
-      <a href="services.html" class="underline">Mission</a>
+      <a href="services.html">Mission</a>
       <a href="team.html">Team</a>
-      <a href="readMore.html">Read More</a>
-      <a href="contact.html">Contact</a>
+      <a href="readMore.html" aria-current="page">Read More</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <!-- <section class="bg-blue-800 text-white py-16 text-center">
-    <h2 class="text-4xl font-bold mb-4">Case Studies & Testimonials</h2>
-    <p class="max-w-2xl mx-auto">Explore the detailed case work and client feedback that define our expertise in expert witness analytics.</p>
-  </section> -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Results</span>
+      <h1>Case Studies &amp; Testimonials</h1>
+      <p>Explore the detailed case work and client feedback that define our expertise in expert witness analytics.</p>
+    </div>
+  </header>
+
+  <!-- Value Counter -->
+  <section class="container" style="margin-top: -2.5rem; position: relative; z-index: 2;">
+    <div class="card text-center" style="box-shadow: var(--shadow-lg);">
+      <h3 class="eyebrow">Value Generated for Our Clients</h3>
+      <div class="flap-row">
+        <div id="flap-counter" class="flap-counter" role="img" aria-label="Over $2,000,000"></div>
+        <span class="flap-over">+</span>
+      </div>
+    </div>
+  </section>
 
   <!-- Case Studies -->
-  <section class="py-16 max-w-6xl mx-auto px-6">
-    <h3 class="text-4xl font-semibold text-gray-800 mb-6">Case Studies</h3>
+  <section class="pt-10 pb-16 max-w-6xl mx-auto px-6">
+    <h3 class="section-title mb-6">Case Studies</h3>
 
     <!-- Case Study 1 -->
-    <div class="bg-white p-6 rounded-lg shadow mb-6">
-        <h3 class="text-xl text-center mb-6" style="color: rgb(0, 14, 138); font-weight: 900;">Haralson V. TileShop</h3>
+    <div class="card mb-6">
+        <h3 class="text-xl text-center mb-6 font-extrabold" style="color: var(--navy-900);">Haralson V. TileShop</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Court Transcript -->
             <div class="h-full">
@@ -57,8 +73,8 @@
     </div>
 
     <!-- Case Study 2 -->
-    <div class="bg-white p-6 rounded-lg shadow mb-6">
-        <h3 class="text-xl text-center mb-6" style="color: rgb(0, 14, 138); font-weight: 900;">Quay V. Monarch</h3>
+    <div class="card mb-6">
+        <h3 class="text-xl text-center mb-6 font-extrabold" style="color: var(--navy-900);">Quay V. Monarch</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Court Transcript -->
             <div class="h-full">
@@ -100,31 +116,43 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-4xl font-semibold text-gray-800 mb-6">Client Testimonials</h3>
+  <section class="section" style="background:#fff; border-top:1px solid var(--line);">
+    <div class="container">
+      <h3 class="section-title mb-6">Client Testimonials</h3>
       
-      <div class="bg-white p-6 rounded-lg shadow mb-6">
-        <p class="text-gray-700">
+      <div class="card mb-6">
+        <p>
             "Slater Bernstein Consulting played an instrumental role in the successful resolution of a complex employment case involving our client, Monarch Healthcare. They were engaged to analyze voluminous datasets from disparate systems to detect patterns in employee break compensation. His ability to synthesize these data sources into a clear, defensible picture of employee compensation rates was nothing short of exceptional. The analysis not only withstood scrutiny but was pivotal in facilitating a highly favorable settlement for our client. SBC's technical acumen, responsiveness, and strategic insight made them an invaluable extension of our litigation team. We would not hesitate to engage them again."
         </p>
-        <span class="block mt-2 text-sm text-gray-500 style: italic">– Meagher + Geer, P.L.L.P.</span>
+        <span class="block mt-3 text-sm font-semibold" style="color: var(--blue-600);">– Meagher + Geer, P.L.L.P.</span>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow">
-        <p class="text-gray-700">
+      <div class="card">
+        <p>
             "Slater Bernstein Consulting's data analysis changed the trajectory of our case. Their work uncovered crucial metrics in employee break compensation rates that significantly strengthened our position in the litigation. SBC translated dense technical data into clear, actionable insights that supported our defense strategy and helped avoid protracted litigation. Thanks to their expert analysis and collaboration with our legal team, we achieved a settlement that protected our interests and minimized disruption to our operations. We’re deeply grateful for SBC's diligence, precision, and professionalism."
         </p>
-        <span class="block mt-2 text-sm text-gray-500 style: italic">– Lead counsel, Midwest Healthcare Provider.</span>
+        <span class="block mt-3 text-sm font-semibold" style="color: var(--blue-600);">– Lead counsel, Midwest Healthcare Provider.</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
-    &copy; 2025 Slater Bernstein Consulting. All rights reserved.
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
+        <div class="footer-links">
+          <a href="services.html">Mission</a>
+          <a href="team.html">Team</a>
+          <a href="readMore.html">Read More</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Slater Bernstein Consulting. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/flapCounter.js"></script>
 </body>
 </html>

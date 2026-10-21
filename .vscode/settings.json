@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^Add-Content css\\\\styles\\.css @'\n\n/\\* Split-flap counter \\*/\n\\.flap-counter \\{ display: flex; justify-content: center; gap: 6px; flex-wrap: nowrap; \\}\n\\.flap \\{ position: relative; width: clamp\\(28px, 8vw, 64px\\); height: clamp\\(44px, 12vw, 96px\\); perspective: 400px; font-family: \"Courier New\", monospace; font-weight: 700; font-size: clamp\\(32px, 9vw, 72px\\); color: #fff; \\}\n\\.flap-static \\{ width: clamp\\(16px, 4vw, 32px\\); \\}\n\\.flap > div \\{ position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: #1f2937; backface-visibility: hidden; \\}\n\\.flap > div span \\{ position: absolute; left: 0; right: 0; text-align: center; line-height: clamp\\(44px, 12vw, 96px\\); \\}\n\\.flap-top, \\.flap-fold-top \\{ top: 0; border-radius: 6px 6px 0 0; border-bottom: 1px solid #000; transform-origin: bottom; \\}\n\\.flap-bottom, \\.flap-fold-bottom \\{ bottom: 0; border-radius: 0 0 6px 6px; transform-origin: top; background: #111827 !important; \\}\n\\.flap-top span, \\.flap-fold-top span \\{ top: 0; \\}\n\\.flap-bottom span, \\.flap-fold-bottom span \\{ bottom: 0; \\}\n\\.flap-fold-top \\{ z-index: 2; \\}\n\\.flap-fold-bottom \\{ z-index: 2; transform: rotateX\\(90deg\\); \\}\n\\.flap\\.flipping \\.flap-fold-top \\{ animation: flap-top 0\\.15s ease-in forwards; \\}\n\\.flap\\.flipping \\.flap-fold-bottom \\{ animation: flap-bottom 0\\.15s 0\\.15s ease-out forwards; \\}\n@keyframes flap-top \\{ to \\{ transform: rotateX\\(-90deg\\); \\} \\}\n@keyframes flap-bottom \\{ to \\{ transform: rotateX\\(0deg\\); \\} \\}\n'@$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

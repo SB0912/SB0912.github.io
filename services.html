@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services - Slater Bernstein Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -11,79 +14,88 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html" class="text-xl font-bold">Slater Bernstein Consulting Agency</a>
+    <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
     <button class="mobile-menu-button" aria-label="Toggle Menu">&#9776;</button>
     <div class="nav-links">
-      <a href="services.html" class="underline">Mission</a>
+      <a href="services.html" aria-current="page">Mission</a>
       <a href="team.html">Team</a>
       <a href="readMore.html">Read More</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </div>
   </nav>
 
-  <!-- Services Page Content -->
-  <main class="flex-grow py-16 px-6 max-w-6xl mx-auto fade-in">
-    <h1 class="text-4xl font-semibold text-center mb-12">Our Services</h1>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Our Mission</span>
+      <h1>Our Services</h1>
+      <p>Data-driven expert witness services for high-stakes wage-and-hour litigation.</p>
+    </div>
+  </header>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Data-driven expert witness services for high-stakes wage-and-hour litigation.</h2>
-      <p class="mb-6 text-gray-700">
-        Litigation outcomes often hinge on data that is incomplete, inconsistent, or difficult to interpret. We specialize in reconstructing that data into clear, defensible evidence. We work with attorneys on wage-and-hour and FLSA disputes to design case data strategy, analyze complex records, and produce damages models that hold up under scrutiny. Our focus is not just analysis, it’s building evidence that stands in deposition and trial.
-      </p>
-      <h2 class="text-2xl font-semibold mb-4">What We Do</h2>
-      <p class="mb-6 text-gray-700">
-        Our work includes:
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Reconstruction of work-hour and compensation timelines</li>
-        <li>Development of defensible damages models</li>
-        <li>Data validation and methodology documentation for opposing counsel</li>
-        <li>Trial-ready visualizations and expert reports</li>
-      </ul>
-    </section>
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Why It Matters</h2>
-      <p class="mb-6 text-gray-700">
-        Weak data creates risk. Strong data creates leverage. Our analyses have directly contributed to materially improved outcomes in seven-figure disputes, including:
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>A 75% reduction in claimed damages for the defense</li>
-        <li>A $700,000 settlement supported by validated overtime analysis</li>
-      </ul>
-    </section>
-        <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Our Approach</h2>
-      <p class="mb-6 text-gray-700">
-        We don’t just analyze data, we build the foundation it stands on. Every engagement is structured around:
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Methodological transparency</li>
-        <li>Reproducibility of results</li>
-        <li>Alignment with legal strategy</li>
-        <li>Clarity for non-technical audiences</li>
-      </ul>
-      <p class="mb-6 text-gray-700">
-        The result is analysis that is both technically sound and legally effective.
-      </p>
-    </section>
+  <main class="flex-grow section">
+    <div class="container" style="max-width: 62rem;">
 
-    <!-- <section>
-      <h2 class="text-2xl font-semibold mb-4">Business Data Analytics</h2>
-      <p class="mb-6 text-gray-700">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</li>
-        <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-        <li>Vestibulum id ligula porta felis euismod semper.</li>
-      </ul>
-    </section> -->
+      <section class="card mb-8 fade-in">
+        <span class="eyebrow">Overview</span>
+        <h2 class="text-2xl font-bold mb-4">Evidence that stands in deposition and trial</h2>
+        <p class="mb-6">
+          Litigation outcomes often hinge on data that is incomplete, inconsistent, or difficult to interpret. We specialize in reconstructing that data into clear, defensible evidence. We work with attorneys on wage-and-hour and FLSA disputes to design case data strategy, analyze complex records, and produce damages models that hold up under scrutiny. Our focus is not just analysis, it’s building evidence that stands in deposition and trial.
+        </p>
+        <h3 class="text-xl font-bold mb-3">What We Do</h3>
+        <p class="mb-4">Our work includes:</p>
+        <ul class="check-list">
+          <li>Reconstruction of work-hour and compensation timelines</li>
+          <li>Development of defensible damages models</li>
+          <li>Data validation and methodology documentation for opposing counsel</li>
+          <li>Trial-ready visualizations and expert reports</li>
+        </ul>
+      </section>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <section class="card card-hover fade-in">
+          <div class="card-icon">📈</div>
+          <h2 class="text-2xl font-bold mb-4">Why It Matters</h2>
+          <p class="mb-4">
+            Weak data creates risk. Strong data creates leverage. Our analyses have directly contributed to materially improved outcomes in seven-figure disputes, including:
+          </p>
+          <ul class="check-list">
+            <li>A 75% reduction in claimed damages for the defense</li>
+            <li>Over $280,000 in unpaid wages uncovered to support a $1M+ settlement for our client. Almost double what was initially claimed.</li>
+          </ul>
+        </section>
+
+        <section class="card card-hover fade-in">
+          <div class="card-icon">🧭</div>
+          <h2 class="text-2xl font-bold mb-4">Our Approach</h2>
+          <p class="mb-4">
+            We don’t just analyze data, we build the foundation it stands on. Every engagement is structured around:
+          </p>
+          <ul class="check-list mb-4">
+            <li>Methodological transparency</li>
+            <li>Reproducibility of results</li>
+            <li>Alignment with legal strategy</li>
+            <li>Clarity for non-technical audiences</li>
+          </ul>
+          <p>The result is analysis that is both technically sound and legally effective.</p>
+        </section>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
-    &copy; 2025 Slater Bernstein Consulting. All rights reserved.
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
+        <div class="footer-links">
+          <a href="services.html">Mission</a>
+          <a href="team.html">Team</a>
+          <a href="readMore.html">Read More</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Slater Bernstein Consulting. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

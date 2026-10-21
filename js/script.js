@@ -54,6 +54,7 @@ const testimonialText = document.getElementById('testimonial-text');
 const testimonialClient = document.getElementById('testimonial-client');
 const prevBtn = document.getElementById('prev-testimonial');
 const nextBtn = document.getElementById('next-testimonial');
+const hasTestimonials = testimonialText && testimonialClient && prevBtn && nextBtn;
 
 function showTestimonial(index) {
   // Wrap index
@@ -75,20 +76,22 @@ function showTestimonial(index) {
   }, 300);
 }
 
-prevBtn.addEventListener('click', () => {
-  showTestimonial(currentTestimonial - 1);
-  resetInterval();
-});
+if (hasTestimonials) {
+  prevBtn.addEventListener('click', () => {
+    showTestimonial(currentTestimonial - 1);
+    resetInterval();
+  });
 
-nextBtn.addEventListener('click', () => {
-  showTestimonial(currentTestimonial + 1);
-  resetInterval();
-});
+  nextBtn.addEventListener('click', () => {
+    showTestimonial(currentTestimonial + 1);
+    resetInterval();
+  });
+}
 
 // Auto cycle every 30 seconds
-let testimonialInterval = setInterval(() => {
+let testimonialInterval = hasTestimonials ? setInterval(() => {
   showTestimonial(currentTestimonial + 1);
-}, 30000);
+}, 30000) : null;
 
 function resetInterval() {
   clearInterval(testimonialInterval);
@@ -98,4 +101,4 @@ function resetInterval() {
 }
 
 // Initialize first testimonial
-showTestimonial(0);
+if (hasTestimonials) showTestimonial(0);

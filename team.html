@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Team - Slater Bernstein Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -11,51 +14,145 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html" class="text-xl font-bold">Slater Bernstein Consulting Agency</a>
+    <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
     <button class="mobile-menu-button" aria-label="Toggle Menu">&#9776;</button>
     <div class="nav-links">
       <a href="services.html">Mission</a>
-      <a href="team.html" class="underline">Team</a>
+      <a href="team.html" aria-current="page">Team</a>
       <a href="readMore.html">Read More</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </div>
   </nav>
 
-  <!-- Team Page Content -->
-  <main class="flex-grow py-16 px-6 max-w-6xl mx-auto fade-in">
-    <h1 class="text-4xl font-semibold text-center mb-12">Our Team</h1>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">The People</span>
+      <h1>Our Team</h1>
+      <p>Select a team member to learn more about their background.</p>
+    </div>
+  </header>
 
-    <div class="grid md:grid-cols-4 gap-8 justify-items-center">
-      <button target="_blank" onclick="window.open('https://www.linkedin.com/in/slaterbernstein/', '_blank')">
-        <div class="text-center max-w-xs">
-          <img src="assets\1719422518267.jpg" alt="Slater Bernstein" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"/>
+  <!-- Team Page Content -->
+  <main class="flex-grow section">
+    <div class="container fade-in">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center">
+      <button type="button" class="team-member" data-member="slater" aria-controls="bio-panel" aria-expanded="false">
+        <div class="text-center max-w-xs mx-auto">
+          <img src="assets\headshot.jpeg" alt="Slater Bernstein" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center"/>
           <h3 class="text-xl font-semibold">Slater Bernstein</h3>
           <p class="text-gray-600">Principal</p>
         </div>
       </button>
-      <button target="_blank" onclick="window.open('https://www.linkedin.com/in/greg-bernstein-85bb035/', '_blank')">
-        <div class="text-center max-w-xs">
-          <img src="assets\1646934928953.jpg" alt="Greg Bernstein" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"/>
+      <button type="button" class="team-member" data-member="greg" aria-controls="bio-panel" aria-expanded="false">
+        <div class="text-center max-w-xs mx-auto">
+          <img src="assets\1646934928953.jpg" alt="Greg Bernstein" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center"/>
           <h3 class="text-xl font-semibold">Greg Bernstein</h3>
           <p class="text-gray-600">Partner</p>
         </div>
       </button>
-      <div class="text-center max-w-xs">
-        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-        <h3 class="text-xl font-semibold">Eric Sand</h3>
-        <p class="text-gray-600">Outside Consultant</p>
-      </div>
-      <div class="text-center max-w-xs">
-        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
-        <h3 class="text-xl font-semibold">Elit Sed Do</h3>
-        <p class="text-gray-600">Janitor</p>
-      </div>
+      <!-- <button type="button" class="team-member" data-member="eric" aria-controls="bio-panel" aria-expanded="false">
+        <div class="text-center max-w-xs">
+          <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-semibold">Eric Sand</h3>
+          <p class="text-gray-600">Outside Consultant</p>
+        </div>
+      </button>
+      <button type="button" class="team-member" data-member="elit" aria-controls="bio-panel" aria-expanded="false">
+        <div class="text-center max-w-xs">
+          <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-semibold">Elit Sed Do</h3>
+          <p class="text-gray-600">Janitor</p>
+        </div>
+      </button> -->
+    </div>
+
+    <!-- Bio panel -->
+    <section id="bio-panel" class="hidden mt-10 max-w-3xl mx-auto bg-white shadow-lg p-8 text-center" aria-live="polite">
+      <h2 id="bio-name" class="text-2xl font-semibold"></h2>
+      <p id="bio-role" class="text-gray-600 mb-4"></p>
+      <p id="bio-text" class="text-gray-800 leading-relaxed mb-6"></p>
+      <div id="bio-links" class="flex flex-wrap justify-center gap-3"></div>
+    </section>
     </div>
   </main>
 
+  <script>
+    // Placeholder bios: replace with real experience and background.
+    const members = {
+      slater: {
+        name: "Slater Bernstein", role: "Principal",
+        bio: "Slater leads Slater Bernstein Consulting Agency, bringing a background in data analysis and forensic data validation. He works alongside legal teams to turn complex data into clear, defensible findings.",
+        links: [
+          { label: "LinkedIn", href: "https://www.linkedin.com/in/slaterbernstein/", external: true },
+          { label: "Email", href: "mailto:slater.bernstein@gmail.com" },
+          { label: "Phone", href: "tel:+16125978989" }
+        ]
+      },
+      greg: {
+        name: "Greg Bernstein", role: "Partner",
+        bio: "As a seasoned Program and Project Manager, Greg brings extensive experience in driving technology solutions that align with business objectives. His ability to navigate the complexities of project lifecycles, coupled with a strategic vision, enables him to optimize performance and ensure a strong return on investment. Throughout his career, he has successfully led diverse projects across various industries, including banking, finance, manufacturing, medical devices, news/media, and retail.",
+        links: [
+          { label: "LinkedIn", href: "https://www.linkedin.com/in/greg-bernstein-85bb035/", external: true }
+        ]
+      },
+      eric: {
+        name: "Eric Sand", role: "Outside Consultant",
+        bio: "Eric supports the team as an outside consultant, contributing specialized expertise on projects that call for additional depth.",
+        links: [{ label: "Contact the Firm", href: "contact.html" }]
+      },
+      elit: {
+        name: "Elit Sed Do", role: "Janitor",
+        bio: "Elit keeps our offices running smoothly and makes sure the team always has a clean, welcoming place to work.",
+        links: [{ label: "Contact the Firm", href: "contact.html" }]
+      }
+    };
+
+    const panel = document.getElementById('bio-panel');
+    const buttons = document.querySelectorAll('.team-member');
+    let active = null;
+
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      const key = btn.dataset.member;
+      if (active === key) {
+        panel.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        active = null;
+        return;
+      }
+      const m = members[key];
+      document.getElementById('bio-name').textContent = m.name;
+      document.getElementById('bio-role').textContent = m.role;
+      document.getElementById('bio-text').textContent = m.bio;
+      const links = document.getElementById('bio-links');
+      links.replaceChildren(...m.links.map(l => {
+        const a = document.createElement('a');
+        a.href = l.href;
+        a.textContent = l.label;
+        a.className = 'btn btn-dark';
+        if (l.external) { a.target = '_blank'; a.rel = 'noopener'; }
+        return a;
+      }));
+      buttons.forEach(b => b.setAttribute('aria-expanded', String(b === btn)));
+      panel.classList.remove('hidden');
+      active = key;
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }));
+  </script>
+
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6 mt-12">
-    &copy; 2025 Slater Bernstein Consulting. All rights reserved.
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a href="index.html" class="brand"><span class="brand-mark">SB</span>Slater Bernstein Consulting</a>
+        <div class="footer-links">
+          <a href="services.html">Mission</a>
+          <a href="team.html">Team</a>
+          <a href="readMore.html">Read More</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Slater Bernstein Consulting. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
